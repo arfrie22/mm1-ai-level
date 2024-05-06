@@ -1,4 +1,8 @@
-# create-svelte
+# Mario Maker Level Generator
+
+Level viewer ~~rewritten in Svelte and Typescript based on the modified version used by~~ is the one from [is-smm-beaten-yet](https://github.com/snoozbuster/is-smm-beaten-yet/blob/main/viewer/), which is based on the level viewer by [leomaurodesenv](https://github.com/leomaurodesenv/smm-course-viewer).
+
+I may rewrite it in Typescript when I have time.
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
