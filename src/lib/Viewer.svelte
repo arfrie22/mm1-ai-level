@@ -103,6 +103,8 @@
 					setUp(courses, scale);
 				}}
 			/>
+		{:else}
+			<span />
 		{/if}
 		<button type="button" class="btn variant-filled" on:click={copyImageToClipboard}>
 			<span class="icon"><i class="bx bxs-copy-alt" /></span>
