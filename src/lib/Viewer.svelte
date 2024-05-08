@@ -12,9 +12,13 @@
 	export let courses: CourseData[];
 	let paginatorSettings = { amounts: [], size: courses.length, page: 1, limit: 1 };
 
-	let divId = 'level-viewer-container-' + id;
+	let divId: string | undefined = undefined;
 
 	async function setUp(courses: CourseData[], scale: number) {
+		if (!divId) {
+			return;
+		}
+		
 		const courseData = courses[paginatorSettings.page];
 		new DrawCourse(divId, courseData.course, courseData.objects, scale);
 	}
@@ -87,9 +91,7 @@
 			<option value={32}>Large</option>
 		</select>
 	</label>
-	<div id={'level-viewer-container-' + id} class="flex-1 overflow-scroll" use:init>
-		<canvas id="canvas"></canvas>
-	</div>
+	<div id={'level-viewer-container-' + id} class="flex-1 overflow-scroll" use:init />
 	<div class="flex justify-between gap-2 w-full px-4">
 		
 		{#if courses.length > 1}

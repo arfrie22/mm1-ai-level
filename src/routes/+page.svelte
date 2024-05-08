@@ -18,12 +18,15 @@
 	async function generate(_event: Event) {
 		generating = true;
 		try {
+			const time = new Date().getTime();
 			const response = await fetch('/api/generate', {
 				method: 'GET',
 				headers: {
 					'Content-Type': 'application/json',
 				},
 			});
+
+			console.log('Time to generate:', (new Date().getTime() - time) / 1000, 'seconds');
 
 			if (!response.ok) {
 				throw new Error('Failed to generate level');
